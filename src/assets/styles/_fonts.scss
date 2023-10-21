@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Abril Fatface', serif;
+    src: url('../fonts/AbrilFatface-Regular.woff2') format('woff2'),
+        url('../fonts/AbrilFatface-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/AbrilFatface-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+$font-family-sans-serif: 'Poppins', sans-serif;
+
+$font-family-serif: 'Abril Fatface', serif;

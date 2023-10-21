@@ -55,3 +55,22 @@ body {
   font-size: 0.75rem;
   text-align: center;
 }
+
+/**************/
+
+.plant-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.plant-card {
+  width: 50%;
+}
+
+.plant-card:first-of-type {
+  margin-right: 20px;
+}
+
+.plant-card img {
+  width: 100%;
+}

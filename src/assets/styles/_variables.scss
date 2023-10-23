@@ -1,7 +1,11 @@
 @use "sass:color";
 
-$uoc-corporate: #000078;
+$uoc-corporate: black;
 $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$main-green: rgb(67, 79, 57);
+$light-green: rgb(161, 189, 135);
 
 $mqMinWidth: 420px;
+
+$containerMaxWidth: calc(500px + 50vw);

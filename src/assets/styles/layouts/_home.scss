@@ -31,12 +31,13 @@ h1, h2, h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: calc(0.8rem + 0.390625vw);
   line-height: 1.5;
 }
 
 .container {
-  max-width: $containerMaxWidth;
+  width: 80%;
+  max-width: 1000px;
   margin: auto;
 }
 
@@ -58,11 +59,11 @@ p {
   }
 
   .initialsection__title {
-    position: absolute;
-    background-color: white;
-    padding: 50px 200px;
-    border-radius: 50%;
-    box-shadow: 10px 10px 10px -10px $main-green;
+    container-type: inline-size;
+
+    h1 {
+      font-size: 10cqw;
+    }
   }
   
   .initialsection__description {
@@ -72,12 +73,10 @@ p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    font-size: 1.5rem;
 
     p {
-      width: 400px;
-      font-size: 1.5rem;
+      width: 25%;
+      font-size: calc(1rem + .390625vw);
     }
 
     i {
@@ -90,6 +89,7 @@ p {
   display: flex;
   flex-direction: row;
   margin-bottom: 70px;
+  align-items: center;
 
   img {
     width: 100%;
@@ -97,7 +97,7 @@ p {
   }
 
   .container__plant-text {
-    width: 60%;
+    width: 100%;
   }
 }
 
@@ -122,7 +122,7 @@ p {
   }
 }
 
-.container__plant--left.container__plant-text {
+.container__plant--left {
   p, h3 {
     text-align: right;
   }
@@ -148,43 +148,60 @@ p {
   }
 }
 
-
-
-
-
-
-
-
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-}
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
 .footer {
-  margin-top: 1.5rem;
+  margin: 2.5rem 0;
   text-align: center;
 
-  .footer__text {
-    font-size: 0.3rem;
+  p {
+    font-size: 0.8rem;
+  }
+
+  i {
+    margin-left: 2px;
+  }
+}
+
+
+@media (max-width: $mqMaxWidth) {
+  .initialsection {
+    .initialsection__description {
+      flex-direction: column;
+
+      p {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .container__plant {
+    flex-direction: column;
+
+    img {
+      order: 1;
+    }
+  }
+
+  .container__plant--left p, .container__plant--left h3 {
+    text-align: left;
+  }
+
+  .container__plant--right, .container__plant--left {
+    img {
+      margin: 0;
+    }
+  }
+
+  .container__cat {
+    flex-direction: column;
+
+    :not(img:last-of-type) {
+      margin-right: 0;
+    }
+
+    :nth-child(2), :nth-child(3) {
+      display: none;
+    }
   }
 }

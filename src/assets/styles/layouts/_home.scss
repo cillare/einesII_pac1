@@ -172,6 +172,10 @@ p {
 // Media queries
 
 @media (max-width: $mqMaxWidth) {
+  .container__plant--left p, .container__plant--left h3 {
+    text-align: left;
+  }
+
   .initialsection {
     .initialsection__description {
       flex-direction: column;
@@ -190,10 +194,6 @@ p {
     img {
       order: 1;
     }
-  }
-
-  .container__plant--left p, .container__plant--left h3 {
-    text-align: left;
   }
 
   .container__plant--right, .container__plant--left {
